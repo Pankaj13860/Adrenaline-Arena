@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrenaline Arena - Where Adventure Meets Adrenaline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Adrenaline Arena</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#booking" class="nav-link">Booking</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Where Adventure Meets Adrenaline</h1>
+            <p>Experience the ultimate thrill with paintball, airsoft, go-karting, laser tag, and VR adventures at our state-of-the-art gaming arena.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn--primary btn--lg">Book Now</a>
+                <a href="#activities" class="btn btn--outline btn--lg">Explore Activities</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Activities</h2>
+                <p>Choose from our exciting range of adrenaline-pumping activities</p>
+            </div>
+            <div class="activities-grid" id="activities-grid">
+                <!-- Activities will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Package</h2>
+                <p>From basic thrills to premium experiences</p>
+            </div>
+            <div class="packages-grid" id="packages-grid">
+                <!-- Packages will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Adventure</h2>
+                <p>Reserve your spot for an unforgettable experience</p>
+            </div>
+            <div class="booking-container">
+                <form class="booking-form" id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Activity</label>
+                            <select class="form-control" id="activity-select" required>
+                                <option value="">Select Activity</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Package</label>
+                            <select class="form-control" id="package-select" required>
+                                <option value="">Select Package</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control" id="booking-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Time</label>
+                            <select class="form-control" id="booking-time" required>
+                                <option value="">Select Time</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Number of Participants</label>
+                            <input type="number" class="form-control" id="participants" min="1" max="24" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Total Price</label>
+                            <div class="price-display" id="total-price">$0</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="customer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="customer-email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="customer-phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Special Requirements</label>
+                        <textarea class="form-control" id="special-requirements" rows="3" placeholder="Any special requests or requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width btn--lg">Complete Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>See our amazing facilities and activities in action</p>
+            </div>
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-category="all">All</button>
+                <button class="gallery-tab" data-category="paintball">Paintball</button>
+                <button class="gallery-tab" data-category="airsoft">Airsoft</button>
+                <button class="gallery-tab" data-category="karting">Go-Karting</button>
+                <button class="gallery-tab" data-category="facilities">Facilities</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery images will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Read reviews from our satisfied adventure seekers</p>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <!-- Testimonials will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Adrenaline Arena</h2>
+                <p>Your premier destination for thrilling adventures</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Adrenaline Arena has been providing heart-pounding adventures since 2015. We're passionate about creating safe, exciting experiences that bring people together and create lasting memories.</p>
+                    
+                    <h3>Safety First</h3>
+                    <p>All our activities are conducted under strict safety protocols with professional-grade equipment. Our trained staff ensures every participant receives proper safety briefings and protective gear.</p>
+                    
+                    <h3>State-of-the-Art Facilities</h3>
+                    <p>Our 50,000 square foot facility features multiple themed arenas, climate-controlled environments, and the latest gaming technology to provide the ultimate experience.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>50,000+</h4>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>5</h4>
+                        <p>Unique Activities</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>10+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>24/7</h4>
+                        <p>Safety Monitoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch for bookings, questions, or special events</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p>1234 Gaming Blvd<br>Adventure City, AC 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@adrenalinearena.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Hours</h4>
+                        <p>Weekdays: 3:00 PM - 10:00 PM<br>Weekends: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Adrenaline Arena</h3>
+                    <p>Where Adventure Meets Adrenaline</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook">📘</a>
+                        <a href="#" target="_blank" aria-label="Instagram">📷</a>
+                        <a href="#" target="_blank" aria-label="Twitter">🐦</a>
+                        <a href="#" target="_blank" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Activities</h4>
+                    <ul>
+                        <li><a href="#activities">Paintball</a></li>
+                        <li><a href="#activities">Airsoft</a></li>
+                        <li><a href="#activities">Go-Karting</a></li>
+                        <li><a href="#activities">Laser Tag</a></li>
+                        <li><a href="#activities">VR Experience</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>1234 Gaming Blvd<br>Adventure City, AC 12345</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@adrenalinearena.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adrenaline Arena. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div class="modal" id="gallery-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <img src="" alt="" id="modal-image">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
